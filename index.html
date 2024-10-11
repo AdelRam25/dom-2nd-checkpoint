@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="bg-[#EEC48E]" >
+    <header>
+        <nav class="bg-white" >
+            <div class="flex justify-between flex-row items-center max-w-screen-xl m-auto p-5 bg-white rounded-md " >
+                <ul class="flex flex-row gap-5 text-xl items-center">
+                    <li>Shop</li>
+                    <li>Brand</li>
+                    <li>Info</li>
+                    <a class="rounded-full bg-black text-white px-5 py-3 font-bold uppercase tracking-tighter " href="#">Bundle Up <span class="bg-[#EEC48E] font-semibold text-black tracking-wider text-sm px-3 py-1 rounded-md">20% Off</span></a>
+        
+                </ul>
+               <div> <img src="https://cdn.shopify.com/s/files/1/0019/5415/2560/files/CTRL-Logo-Black.svg?v=1658316895" alt=""></div>
+               <div class="flex flex-row gap-5 cursor-pointer">
+                <input class="px-3 py-1 rounded-full bg-gray-200" type="text" placeholder="Search ...">
+                <img src="user.png" alt="">
+                <img src="cart.png" alt="">
+               </div>
+
+            </div>
+        </nav>
+        
+        <div class=" h-screen bg-[url(background.jpg)] bg-cover bg-center relative div">
+            <div class="backdrop-blur-lg  absolute bottom-28 right-0 left-0 w-full text-center pb-10 ">
+                <div class= " text-white flex flex-col items-center ">
+                  
+                    <div class="lg:text-5xl text-xl text-black font-light uppercase italic"><p>The <span class="font-bold">most</span> Delicious Meal Replacement In The Game.</p></div>
+                    <div class="class=lg:absolute z-10 bottom-12 w-full left-0 flex items-center justify-center gap-5 mt-10 ">
+                        <img  src="https://cdn.shopify.com/s/files/1/0019/5415/2560/files/CQ.svg?v=1684234613" alt="">
+                        <img  src="https://cdn.shopify.com/s/files/1/0019/5415/2560/files/MensHealth.svg?v=1684234613" alt="">
+                        <img  src="https://cdn.shopify.com/s/files/1/0019/5415/2560/files/gnc.svg?v=1684234613" alt="">
+                    </div>
+                </div>
+               
+            
+        </div>
+    </header>
+    <!-- Bedin main -->
+    
+    <div class="max-w-screen-md mx-auto p-4 border bg-gray-100 text-center mt-20 rounded-full font-semibold text-xl">
+        <h1>Total quantity: <span id="total-quantity" class="font-bold text-xl underline">0</span>€</h1>
+        <h1>Total price: <span id="total-price" class="font-bold text-xl underline">0</span>€</h1>
+      </div>
+     <div class="max-w-screen-lg mx-auto grid grid-cols-3 gap-8 mt-8 mb-20">
+        <!-- Begin Card1 -->
+        <div class="border rounded-xl  px-3 py-1 relative group product-card hover:scale-[1.025] hover:rotate-2 transition ease-out duration-300">
+            <img class="rounded-xl p-1" src="black.jpg" alt="">
+            <h3 class="text-sm text-slate-600 underline">Black Shaker 28oz Capacity</h3>
+            <div class="flex justify-between">
+                <h4 class="font-bold text-xl underline"><span class="product-price">19</span> €</h4>
+                <p class="text-lg font-semibold"> <button class="bg-black text-white py-0.5 px-3 rounded-full opacity-0 group-hover:opacity-100 transition minus-quantity-button">-</button> <span class="quantity" >0</span></p>
+            </div>
+            <button class="bg-black text-white rounded-full px-2 py-1 text-sm absolute top-1 left-1 opacity-0 group-hover:opacity-100 transition add-quantity-button">Add to cart</button>
+        </div>
+        <!-- End Card 1 -->
+        <!-- Begin card2 -->
+        <div class="border rounded-sm px-3 py-1 relative group product-card hover:scale-[1.025] hover:rotate-2 transition ease-out duration-300">
+            <img class="rounded-xl p-1" src="pink.jpg" alt="">
+            <h3 class="text-sm text-slate-600 underline">Pink Shaker 28oz Capacity</h3>
+            <div class="flex justify-between">
+                <h4 class="font-bold text-xl underline"><span class="product-price">24</span> €</h4>
+                <p class="text-lg font-semibold"> <button class="bg-[#FEB3DA] text-white py-0.5 px-3 rounded-full opacity-0 group-hover:opacity-100 transition minus-quantity-button">-</button> <span class="quantity" >0</span></p>
+            </div>
+            <button class="bg-black text-white rounded-full px-2 py-1 text-sm absolute top-1 left-1 opacity-0 group-hover:opacity-100 transition add-quantity-button">Add to cart</button>
+        </div>
+        <!-- end card2 -->
+         <!-- begin card3 -->
+
+        <div class="border rounded-sm px-3 py-1 relative group product-card hover:scale-[1.025] hover:rotate-2 transition ease-out  duration-300">
+            <img class="rounded-xl p-1" src="red.jpg" alt="">
+            <h3 class="text-sm text-slate-600 underline">Red Shaker 28oz Capacity </h3>
+            <div class="flex justify-between">
+                <h4 class="font-bold text-xl underline"><span class="product-price">31</span> €</h4>
+                <p class="text-lg font-semibold"> <button class="bg-red-500 text-white py-0.5 px-3 rounded-full opacity-0 group-hover:opacity-100 transition minus-quantity-button">-</button> <span class="quantity" >0</span></p>
+            </div>
+            <!-- end card3 -->
+            <button class="bg-black text-white rounded-full px-2 py-1 text-sm absolute top-1 left-1 opacity-0 group-hover:opacity-100 transition add-quantity-button">Add to cart</button>
+        </div>
+       
+            <button class="bg-black text-white rounded-sm px-2 py-0.5 text-sm absolute top-1 left-1 opacity-0 group-hover:opacity-100 transition add-quantity-button">Add to cart</button>
+        </div>
+
+      
+       <div class="bg-black flex justify-between px-10 py-3 items-center max-w-screen-xl m-auto rounded-2xl cursor-pointer mb-10 ">
+        <div>
+            <button class="rounded-full bg-white text-black px-8 py-4 font-light uppercase tracking-tighter hover:bg-gray-600 transition">FIND YOUR <span class="font-bold">NEAREST</span> <span class="text-red-500">SHOP</span></button>
+        </div>
+        <img class="size-5/12 hover:scale-[1.025] transition ease-out duration-1000 " src="https://cdn.shopify.com/s/files/1/0019/5415/2560/files/gnc-map_large_c69cecb2-9388-470e-98b4-77f52a56ea23.svg?v=1686673882" alt="">
+       </div>
+
+       <!-- Footer -->
+
+       <footer class="bg-white p-10">
+        <div class="flex flex-row justify-between items-center">
+          <div class="flex items-center gap-20">
+            <div>
+              <img class="size-44" src="https://cdn.shopify.com/s/files/1/0019/5415/2560/files/CTRL-Logo-Black.svg?v=1658316895" alt="Logo CTRL">
+            </div>
+            <p class="text-3xl">Catered To Real Life™</p>
+          </div>
+          <div class="flex gap-5">
+            <!-- Social media -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black"><path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black"><path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black"><path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"></path></svg>
+          </div>
+        </div>
+        <div>
+          <div class="flex flex-row">
+           
+              <ul class="flex flex-row gap-20 text-2xl cursor-pointer">
+                <li class="hover:text-gray-300 transition">FAQ</li>
+                <li class="hover:text-gray-300 transition">Our Legends</li>
+                <li class="hover:text-gray-300 transition">Press</li>
+                <li class="hover:text-gray-300 transition">Order Tracking</li>
+              </ul>
+           
+          </div>
+          <br>
+          <div class="flex flex-row mb-20">
+           
+              <ul class="flex flex-row gap-20 text-2xl cursor-pointer">
+                <li class="hover:text-gray-300 transition">CONTACT</li>
+                <li class="hover:text-gray-300 transition">Store Locator</li>
+                <li class="hover:text-gray-300 transition">Manage Subscription</li>
+              </ul>
+          
+          </div>
+          <div class="flex flex-row">
+            <ul class="flex flex-row gap-10 text-md cursor-pointer">
+              <li class="hover:text-gray-300 transition">Terms of Service</li>
+              <li class="hover:text-gray-300 transition">Shipping Policy</li>
+              <li class="hover:text-gray-300 transition">Refund Policy</li>
+              <li class="hover:text-gray-300 transition">Privacy Policy</li>
+            </ul>
+            <p class="text-md">© 2019 - 2024 CTRL. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
