@@ -38,3 +38,78 @@ for (let card of cards) {
     }
   }
  }
+
+ 
+class Product {
+  constructor(id, name, price) {
+      this.id = id;
+      this.name = name;
+      this.price = price;
+  }
+}
+
+class ShoppingCartItem {
+  constructor(product, quantity) {
+      this.product = product;
+      this.quantity = quantity;
+  }
+
+
+  getTotalPrice() {
+      return this.product.price * this.quantity;
+  }
+}
+
+
+class ShoppingCart {
+  constructor() {
+      this.items = [];
+  }
+
+
+  addItem(product, quantity) {
+      const existingItem = this.items.find(item => item.product.id == product.id);
+      if (existingItem) {
+          existingItem.quantity += quantity; 
+      } else {
+          const newItem = new ShoppingCartItem(product, quantity);
+          this.items.push(newItem);
+      }
+  }
+
+
+  removeItem(productId) {
+      this.items = this.items.filter(item => item.product.id !== productId);
+  }
+
+
+  getTotal() {
+      return this.items.reduce((total, item) => total + item.getTotalPrice(), 0);
+  }
+
+
+  displayItems() {
+      console.log("Shopping Cart Items:");
+      this.items.forEach(item => {
+          console.log(`${item.product.name} (x${item.quantity}): ${item.getTotalPrice()}€`);
+      });
+      console.log(`Total: ${this.getTotal()}€`);
+  }
+}
+
+
+const product1 = new Product(1, "Black Shaker 28oz Capacity", 19);
+const product2 = new Product(2, "Pink Shaker 28oz Capacity", 24);
+const product3 = new Product(3, "Red Shaker 28oz Capacity", 31);
+
+const cart = new ShoppingCart();
+
+
+cart.addItem(product1, 2); 
+cart.addItem(product2, 1);
+cart.addItem(product3, 3); 
+
+
+cart.displayItems();
+cart.removeItem(2); 
+cart.displayItems();
